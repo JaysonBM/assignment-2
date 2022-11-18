@@ -1,0 +1,307 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    background-color: rgb(25, 25, 25);
+    color: rgb(235, 235, 235);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.wrapper {
+    margin: auto;
+}
+
+nav {
+    background-color: rgb(25, 25, 25);
+    border-bottom: solid 2px red;
+    padding-bottom: 1rem;
+  }
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+nav li {
+    padding: 0.3rem;
+    text-align: right;
+  }
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 0 .625rem;
+    padding: 0 .625rem;
+  }
+
+nav li:hover {
+    background-color: #252525;
+  }
+
+.logo {
+    display: flex;
+    float: left;
+  }
+
+.drop-down {
+    display: none;
+  }
+
+header {
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+nav img {
+    width: 6rem;
+    height: auto;
+}
+
+section {
+    padding-top: 6.25rem;
+}
+
+.hero {
+    position: relative;
+    background-image: url(../images/201b48eb-76e1-41f1-a1f3-45b36259b156.jpg);
+    height: 50rem;
+    max-width: 100rem;
+    background-position: 70% 39%;
+    margin: auto;
+}
+
+.hero h2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 12px;
+    font-weight: normal;
+    text-shadow: 2 2 4px #000;
+}
+
+.about {
+    display: flex;
+    padding: 10px;
+    width: auto;
+    margin-top: 100px;
+}
+
+.about h2 {
+    white-space: nowrap;
+    padding: 40px;
+    margin-right: 20px;
+    border-right: solid 2px red;
+    align-items: center;
+}
+
+.about h3 {
+    flex-wrap: wrap;
+    margin-left: 30px;
+    padding-right: 30px;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio h2 {
+    font-size: 30px;
+    margin-right: 75px;
+}
+
+.pictures {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.pictures img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.pictures img:hover {
+    background-color: black;
+    opacity: 50%;
+}
+
+.more h2{
+    font-size: 35px;
+    text-align: center;
+    margin: 30px;
+}
+
+.flex1 {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.flex1 div {
+    background-color: #100f0f;
+    padding: 25px;
+    border: solid 2px rgb(129, 0, 0);
+    border-left: none;
+    border-radius: 2px;
+}
+
+.flex1 img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.flex1 p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+footer {
+    font-size: 20px;
+    background-color: #252525;
+    padding: 30px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+/*Small Laptop*/
+@media screen and (max-width: 64em){
+    .pictures {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portfolio h2 {
+        margin-bottom: 5px;
+    }
+}
+
+/*Tablet*/
+@media screen and (max-width: 48em){
+    .portfolio {
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .portfolio h2 {
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+    
+    .pictures {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*Mobile*/
+@media screen and (max-width: 30em){
+
+    header {
+        font-size: 1em;
+    }
+
+    .drop-down {
+        display: block;
+    }
+
+    nav {
+        height: 3.6rem;
+        overflow: hidden;
+    }
+
+    .nav-expanded {
+        height: auto; 
+    }
+
+    nav li {
+        flex-basis: 100%;
+    }
+
+    .hero {
+        height: 30rem;
+    }
+
+    .about {
+        display: block;
+        padding: 10px;
+        width: auto;
+        margin-top: 100px;
+        text-align: center;
+    }
+    
+    .about h2 {
+        white-space: nowrap;
+        padding: 40px;
+        margin-right: 20px;
+        border-right: none;
+        border-bottom: solid 2px red;
+    }
+    
+    .about h3 {
+        margin-top: 2rem;
+        text-align: left;
+        flex-wrap: wrap;
+        margin-left: 30px;
+        padding-right: 30px;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    
+    .portfolio {
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .portfolio h2 {
+        text-align: center;
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+
+    .pictures {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .flex1 {
+        display: block;
+        margin-bottom: 30px;
+    }
+    
+    .flex1 div {
+        background-color: #100f0f;
+        padding: 25px;
+        border: solid 2px rgb(129, 0, 0);
+        border-radius: 2px;
+    }
+    
+    .flex1 img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .flex1 p {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+}
